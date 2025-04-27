@@ -252,6 +252,16 @@
   width: 40%;
 }
 
+/* Add styles for the sign-out button */
+.sign-out-button {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .profile-cover-section {
@@ -278,6 +288,12 @@
   .profile-stats-container {
     flex-direction: column;
     gap: 1.5rem;
+  }
+
+  .sign-out-button {
+    display: block;
+    position: absolute;
+    right: 2rem;
   }
 }
 

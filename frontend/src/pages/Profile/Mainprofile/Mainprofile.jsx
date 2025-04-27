@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Post from "../../feed/post/Post";
 import { useNavigate } from "react-router-dom";
 import "./Mainprofile.css";
-import { FaArrowLeft } from "react-icons/fa";
+import { FaArrowLeft, FaSignOutAlt } from "react-icons/fa";
 import Avatar from "@mui/material/Avatar";
 import { useTranslation } from "react-i18next";
 
@@ -12,6 +12,13 @@ const Mainprofile = ({ user, uid }) => {
   const [tweets, setTweets] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
+
+  const handleSignOut = () => {
+    // Assuming you have a signOut function in your auth context
+    // Replace this with your actual sign-out logic
+    localStorage.removeItem("userData");
+    navigate("/login");
+  };
 
   useEffect(() => {
     if (!uid) {
@@ -54,6 +61,12 @@ const Mainprofile = ({ user, uid }) => {
             {tweets.length} {t("profile.tweets")}
           </p>
         </div>
+        <button className="sign-out-button" onClick={handleSignOut}>
+          <FaSignOutAlt
+            className="sign-out-icon"
+            aria-label={t("common.sign_out")}
+          />
+        </button>
       </header>
 
       <section className="profile-cover-section">
