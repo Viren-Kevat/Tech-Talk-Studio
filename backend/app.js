@@ -3,6 +3,7 @@ const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
 const fileUpload = require("express-fileupload");
+const connectDB = require("./db");
 const app = express();
 const port = process.env.PORT || 3000;
 const authRoutes = require("./routes/authRoutes");
@@ -55,6 +56,9 @@ app.use(
     },
   })
 );
+
+// Connect to MongoDB
+connectDB();
 
 // MongoDB Connection
 mongoose
