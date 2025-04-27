@@ -65,7 +65,7 @@ function TweetBox() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
-    if (!tweetMessage.trim()) return setError("Tweet message cannot be empty.");
+    if (!tweetMessage.trim()) return setError("Post cannot be empty.");
     if (countWords(tweetMessage) > MAX_WORDS)
       return setError(`Tweet exceeds ${MAX_WORDS} words.`);
 
@@ -186,17 +186,17 @@ function TweetBox() {
           <Button
             type="submit"
             className="tweetBox__tweetButton"
-            disabled={isLoading || !tweetMessage.trim()}
-            style={{
-              backgroundColor: "#2d3436",
-              color: "#ffffff",
-              borderRadius: "8px",
-              padding: "8px 16px",
-              fontFamily: "Roboto, sans-serif",
-              fontSize: "0.9rem",
-            }}
+            disabled={isLoading}
           >
-            {isLoading ? <CircularProgress size={24} /> : "Post"}
+            {isLoading ? (
+              <CircularProgress size={24} />
+            ) : (
+              <img
+                src="/favicon.png"
+                alt="Post"
+                style={{ width: "24px", height: "24px" }}
+              />
+            )}
           </Button>
         </div>
 
