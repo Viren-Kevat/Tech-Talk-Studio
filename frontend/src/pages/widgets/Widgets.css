@@ -1,0 +1,267 @@
+/* Widgets.css */
+
+/* General Styles */
+.widgets {
+  width: 100%;
+  max-width: 500px;
+  height: 25rem;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  color: #333;
+}
+
+.widgets__search-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.widgets__search-input {
+  /* display: flex; */
+  position: relative;
+  width: 100%;
+}
+
+.widgets__search-icon {
+  position: absolute;
+  left: 10px;
+  top: 25%;
+  transform: translateY(-50%);
+  color: #888;
+  font-size: 18px;
+}
+
+.widgets__search-field {
+  width: 100%;
+  padding: 12px 40px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  outline: none;
+  background-color: #f7f7f7;
+  color: #333;
+  transition: all 0.3s ease;
+  margin-bottom: 1rem;
+}
+
+.widgets__search-field::placeholder {
+  color: #aaa;
+}
+
+.widgets__search-field:focus {
+  border-color: #333;
+  background-color: #fff;
+}
+
+.widgets__search-button {
+  padding: 12px 25px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 10px;
+}
+
+.widgets__search-button:hover {
+  background-color: #555;
+}
+
+.widgets__search-button:focus {
+  outline: none;
+}
+
+/* Loading and Error */
+.widgets__loading,
+.widgets__error {
+  text-align: center;
+  font-size: 16px;
+  color: #888;
+  font-weight: 500;
+}
+
+/* Content container for search results */
+.widgets__content-container {
+  padding: 15px;
+}
+
+.widgets__heading {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #000;
+}
+
+/* Profile Info */
+.sprofile-info {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid #e0e0e0;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sprofile-info:hover {
+  background-color: #f1f1f1;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.sprofile-info__avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 15px;
+  border: 2px solid #ccc;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.sprofile-info__avatar:hover {
+  border-color: #333;
+  transform: scale(1.1);
+}
+
+.sprofile-info__details {
+  display: flex;
+  flex-direction: column;
+}
+
+.sprofile-info__name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.sprofile-info__name:hover {
+  color: #555;
+}
+
+.sprofile-info__username {
+  font-size: 14px;
+  color: #777;
+  margin-top: 5px;
+  transition: color 0.3s ease;
+}
+
+.sprofile-info__username:hover {
+  color: #555;
+}
+
+/* Add subtle animation */
+.sprofile-info {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Empty Results */
+.widgets__no-results {
+  text-align: center;
+  font-size: 16px;
+  color: #777;
+  font-weight: 400;
+}
+
+.widgets__no-results a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.widgets__no-results a:hover {
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  .widgets {
+    padding: 0.5rem;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .widgets__search-container {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .widgets__search-input {
+    flex: 1;
+    padding: 0.5rem;
+    border-radius: 8px;
+  }
+  .widgets__search-icon {
+    position: absolute;
+    left: 10%;
+  }
+  .widgets__search-button {
+    padding: 0.5rem;
+    font-size: 0.875rem;
+  }
+
+  .profile-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding: 0.5rem;
+  }
+
+  .sprofile-info {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .sprofile-info__avatar {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+  }
+
+  .sprofile-info__name {
+    font-size: 16px;
+  }
+
+  .sprofile-info__username {
+    font-size: 12px;
+  }
+
+  .sprofile-info__avatar {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .sprofile-info__details {
+    align-items: flex-start;
+  }
+
+  .sprofile-info__name {
+    font-size: 0.875rem;
+  }
+
+  .sprofile-info__username {
+    font-size: 0.75rem;
+  }
+}

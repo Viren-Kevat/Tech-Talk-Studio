@@ -1,0 +1,215 @@
+/* Editprofile.css */
+:root {
+  --primary-text: #2d3436;
+  --secondary-text: #636e72;
+  --border-color: #e0e0e0;
+  --background-light: #f8f9fa;
+  --error-color: #c92a2a;
+}
+
+.edit-profile-container {
+  margin-bottom: 2rem;
+}
+
+.edit-btn {
+  border-color: var(--border-color) !important;
+  color: var(--primary-text) !important;
+  text-transform: none !important;
+  font-family: "Inter", sans-serif !important;
+}
+
+/* Updated layout for better alignment and visibility */
+.edit-profile__modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  max-width: 90%;
+  max-height: 90%;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.edit-profile__header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid var(--border-color);
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary-text);
+}
+
+.edit-profile__form {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background-color: var(--background-light);
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  margin: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+}
+
+.edit-profile__footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
+  padding: 1rem;
+  border-top: 1px solid var(--border-color);
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.MuiTextField-root {
+  background-color: #ffffff;
+}
+
+.MuiInputLabel-root {
+  color: var(--secondary-text) !important;
+}
+
+.MuiOutlinedInput-root {
+  border-radius: 8px !important;
+}
+
+.MuiOutlinedInput-notchedOutline {
+  border-color: var(--border-color) !important;
+}
+
+.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: var(--primary-text) !important;
+}
+
+.image-upload-container {
+  border: 2px dashed var(--border-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.image-upload-container:hover {
+  border-color: var(--primary-text);
+  background-color: var(--background-light);
+}
+
+.upload-label {
+  color: var(--secondary-text);
+  font-family: "Inter", sans-serif;
+  cursor: pointer;
+}
+
+.hidden-input {
+  display: none;
+}
+
+.birthday-section {
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.birthday-section:hover {
+  background-color: var(--background-light);
+}
+
+.birthday-trigger {
+  display: flex;
+  justify-content: space-between;
+  color: var(--secondary-text);
+}
+
+.birthday-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 400px;
+  max-width: 90%;
+}
+
+.birthday-modal h3 {
+  margin: 0 0 1rem 0;
+  color: var(--primary-text);
+  font-family: "Roboto", sans-serif;
+}
+
+.birthday-modal p {
+  color: var(--secondary-text);
+  margin-bottom: 1.5rem;
+}
+
+.birthday-modal__date-input {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.birthday-modal__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.error-message {
+  color: var(--error-color);
+  background-color: #ffe3e3;
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
+.edit-profile__professional-section {
+  border-top: 1px solid var(--border-color);
+  padding-top: 1.5rem;
+}
+
+.edit-profile__professional-section button {
+  text-transform: none !important;
+  color: var(--primary-text) !important;
+  justify-content: space-between !important;
+}
+
+@media (max-width: 768px) {
+  .edit-profile__modal {
+    width: 90%;
+    padding: 1rem;
+  }
+
+  .edit-profile__form {
+    gap: 1rem;
+  }
+
+  .image-upload-container {
+    padding: 1rem;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.MuiCircularProgress-root {
+  color: var(--primary-text) !important;
+}

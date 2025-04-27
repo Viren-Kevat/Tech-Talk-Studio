@@ -1,0 +1,226 @@
+/* Login.css */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+  padding: 2rem;
+}
+
+.login-brand {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.twitter-icon {
+  font-size: 4rem;
+  color: #2d3436;
+}
+
+.login-brand h1 {
+  font-family: "Roboto", sans-serif;
+  color: #2d3436;
+  margin-top: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.login-card {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 450px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+}
+
+.login-title {
+  font-family: "Roboto", sans-serif;
+  color: #2d3436;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+.login-error {
+  background: #ffe3e3;
+  color: #c92a2a;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  border: 1px solid #ffc9c9;
+  font-size: 0.9rem;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 1rem;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  color: #2d3436;
+  font-family: "Inter", sans-serif;
+  transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+  border-color: #636e72;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(99, 110, 114, 0.1);
+}
+
+.input-group label {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #636e72;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  background: #ffffff;
+  padding: 0 0.5rem;
+}
+
+.input-group input:focus ~ label,
+.input-group input:not(:placeholder-shown) ~ label {
+  top: 0;
+  font-size: 0.8rem;
+  color: #2d3436;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #636e72;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.password-toggle:hover {
+  color: #2d3436;
+}
+
+.login-button {
+  width: 100%;
+  padding: 1rem;
+  background: #2d3436;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.login-button:hover {
+  background: #40484b;
+}
+
+.social-login {
+  margin-top: 2rem;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  color: #636e72;
+  margin: 2rem 0;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #e0e0e0;
+  margin: 0 0.5rem;
+}
+
+.google-login {
+  width: 100%;
+  padding: 1rem;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  color: #2d3436;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.google-login:hover {
+  border-color: #b2bec3;
+  background: #f8f9fa;
+}
+
+.google-icon {
+  font-size: 1.2rem;
+  color: #2d3436;
+}
+
+.signup-link {
+  text-align: center;
+  margin-top: 2rem;
+  color: #636e72;
+}
+
+.signup-link a {
+  color: #2d3436;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.signup-link a:hover {
+  color: #40484b;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .login-card {
+    padding: 1.5rem;
+  }
+
+  .login-brand {
+    margin-bottom: 2rem;
+  }
+
+  .twitter-icon {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-container {
+    padding: 1rem;
+  }
+
+  .login-card {
+    border: none;
+    box-shadow: none;
+    padding: 0;
+  }
+}

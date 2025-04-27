@@ -1,0 +1,169 @@
+/* userProfile.css */
+
+/* Page Layout */
+.userprofilePage {
+  display: grid;
+  grid-template-columns: 0.12fr 1fr;
+  background-color: #ffffff;
+  min-height: 100vh;
+  /* display: flex; */
+}
+
+/* Main Profile Content Area */
+.profile-main-content {
+  flex: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  background-color: #f9f9f9;
+  overflow-y: auto;
+}
+
+/* Loading State */
+.loading-state {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+  color: #636e72;
+  font-family: "Inter", sans-serif;
+  font-size: 1.2rem;
+}
+
+/* Error State */
+.error-state {
+  background: #ffe3e3;
+  border: 1px solid #ffc9c9;
+  border-radius: 10px;
+  padding: 2rem;
+  color: #c92a2a;
+  max-width: 700px;
+  margin: 4rem auto;
+  font-family: "Inter", sans-serif;
+  text-align: center;
+}
+
+/* Profile Container */
+.profile-section {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 14px;
+  padding: 2.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+/* Profile Header (Top Part) */
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.profile-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #dfe6e9;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.profile-name {
+  font-family: "Roboto", sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #2d3436;
+  margin: 0;
+}
+
+.profile-username {
+  font-family: "Inter", sans-serif;
+  color: #636e72;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+/* Profile Details Section */
+.profile-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.detail-card {
+  background: #f1f2f6;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 1.5rem;
+}
+
+.detail-title {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  color: #2d3436;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.detail-content {
+  font-family: "Inter", sans-serif;
+  font-size: 0.95rem;
+  color: #636e72;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .profile-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .profile-avatar {
+    margin: 0 auto;
+  }
+
+  .profile-main-content {
+    padding: 2rem 1rem;
+  }
+
+  .profile-section {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-name {
+    font-size: 1.6rem;
+  }
+
+  .profile-username {
+    font-size: 1rem;
+  }
+
+  .detail-card {
+    padding: 1.2rem;
+  }
+}
+
+/* Smooth Fade Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

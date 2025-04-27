@@ -1,0 +1,261 @@
+/* Sidebar.css */
+
+/* Base */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 260px;
+  height: 100vh;
+  background: #ffffff;
+  border-right: 1px solid #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 1rem;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.05);
+  z-index: 1000;
+  animation: slideIn 0.4s ease;
+}
+
+.sidebar__logo {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.logo-image {
+  width: 80%;
+  height: auto;
+  border-radius: 10%;
+}
+
+.logo-text {
+  font-size: 1.8rem;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  color: #2d3436;
+}
+
+/* Navigation Links */
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  color: var(--twitter-secondary-text);
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+.nav-link:hover {
+  background-color: var(--twitter-hover-bg);
+  color: var(--twitter-text);
+}
+
+.nav-link .nav-icon {
+  font-size: 1.25rem;
+  color: inherit;
+}
+
+.nav-link span {
+  font-size: 0.875rem;
+  color: inherit;
+}
+
+/* User Panel */
+.user-panel {
+  display: flex;
+  align-items: center;
+  margin-top: auto;
+  gap: 0.8rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+}
+
+.user-avatar {
+  border: 2px solid #e0e0e0;
+}
+
+.user-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.user-name {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.user-role {
+  font-size: 0.85rem;
+  color: #636e72;
+  margin: 0;
+}
+
+/* More Button */
+.more-btn {
+  color: #636e72;
+}
+
+/* Menu */
+.profile-info {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.sub-user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.sub-user-info h4 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.sub-user-info h5 {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #636e72;
+}
+
+/* Mobile Bottom Navigation */
+.mobile-nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #ffffff;
+  border-top: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: space-around;
+  padding: 0.7rem 0;
+  z-index: 1000;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.mobile-nav .nav-link {
+  flex-direction: column;
+  gap: 0.2rem;
+  font-size: 0.75rem;
+  color: #2d3436;
+  transition: color 0.3s;
+}
+
+.mobile-nav .nav-link .nav-icon {
+  font-size: 1.5rem;
+}
+
+.mobile-nav .nav-link.active,
+.mobile-nav .nav-link:hover {
+  color: #000000;
+}
+
+/* Animations */
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .mobile-nav .nav-link {
+    font-size: 0.7rem;
+  }
+
+  .mobile-nav .nav-icon {
+    font-size: 1.3rem;
+  }
+}
+
+/* Search Modal */
+.search-icon-button {
+  background-color: transparent;
+  color: var(--twitter-secondary-text);
+  border: none;
+  padding: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.search-icon-button:hover {
+  background-color: var(--twitter-hover-bg);
+  color: var(--twitter-text);
+}
+
+.search-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+.search-modal:focus {
+  outline: none;
+}
+
+/* Dim background when modal is open */
+.MuiBackdrop-root {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Search Span */
+.search-span {
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 600;
+
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.search-span:hover {
+  background-color: var(--twitter-accent);
+  color: white;
+}

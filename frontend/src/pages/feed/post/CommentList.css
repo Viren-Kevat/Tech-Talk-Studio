@@ -1,0 +1,160 @@
+/* CommentList.css */
+.comment-list {
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+
+.comment-item {
+  padding: 1rem;
+  border-bottom: 1px solid #e0e0e0;
+  transition: background-color 0.2s ease;
+}
+
+.comment-item:hover {
+  background-color: #f8f9fa;
+}
+
+.comment-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.comment-avatar {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.comment-avatar img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #e0e0e0;
+}
+
+.verified-icon {
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+  color: #2d3436;
+  background: #ffffff;
+  border-radius: 50%;
+  font-size: 0.8rem;
+}
+
+.comment-user-info {
+  flex-grow: 1;
+}
+
+.comment-user-info h4 {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.95rem;
+  color: #2d3436;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.inline-verified-icon {
+  color: #2d3436;
+  font-size: 0.8rem;
+}
+
+.username {
+  margin: 0;
+  color: #636e72;
+  font-size: 0.85rem;
+}
+
+.timestamp {
+  color: #636e72;
+  font-size: 0.8rem;
+  margin-left: 0.5rem;
+}
+
+.comment-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.comment-actions button {
+  background: none;
+  border: none;
+  color: #636e72;
+  cursor: pointer;
+  padding: 0.25rem;
+  transition: color 0.2s ease;
+}
+
+.comment-actions button:hover {
+  color: #2d3436;
+}
+
+.comment-content {
+  margin-left: 3rem;
+}
+
+.comment-content p {
+  color: #2d3436;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.comment-textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  font-family: inherit;
+  resize: vertical;
+  min-height: 80px;
+}
+
+.comment-textarea:focus {
+  outline: none;
+  border-color: #2d3436;
+  box-shadow: 0 0 0 2px rgba(45, 52, 54, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .comment-header {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .comment-content {
+    margin-left: 0;
+    margin-top: 0.5rem;
+  }
+
+  .comment-avatar img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .comment-user-info h4 {
+    font-size: 0.9rem;
+  }
+
+  .username {
+    font-size: 0.8rem;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.comment-item {
+  animation: fadeIn 0.3s ease-out;
+}

@@ -1,0 +1,127 @@
+/* App.css */
+:root {
+  --primary-text: #2d3436;
+  --secondary-text: #636e72;
+  --border-color: #e0e0e0;
+  --background-light: #f8f9fa;
+  --error-color: #c92a2a;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: var(--primary-text);
+  line-height: 1.6;
+  background-color: #ffffff;
+  scrollbar-width: none;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Roboto", sans-serif;
+  color: var(--primary-text);
+}
+
+/* Main Content Area */
+.main-content {
+  flex: 1;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 1rem;
+}
+
+/* Loading State */
+.loading-state {
+  padding: 2rem;
+  text-align: center;
+  color: var(--secondary-text);
+  font-size: 1.1rem;
+}
+
+/* Error State */
+.error-state {
+  padding: 1.5rem;
+  background: #ffe3e3;
+  border: 1px solid var(--error-color);
+  border-radius: 8px;
+  margin: 2rem;
+  color: var(--error-color);
+  text-align: center;
+}
+
+/* 404 Page */
+.not-found {
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.not-found h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .main-content {
+    padding: 0.5rem;
+  }
+
+  .error-state {
+    margin: 1rem;
+  }
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Enhanced button hover effects */
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  display: none;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background-light);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--secondary-text);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary-text);
+}
