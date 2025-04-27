@@ -414,7 +414,7 @@ const Signup = () => {
 
         <div className="auth-footer">
           {t("signup.already_have_account")}{" "}
-          <Link to="/" className="auth-link">
+          <Link to="/login" className="auth-link">
             {t("signup.log_in")}
           </Link>
         </div>
